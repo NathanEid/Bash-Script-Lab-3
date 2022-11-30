@@ -1,0 +1,6 @@
+for i in `ls /home/nathan/*`
+do
+if [ -f $i ]; then
+    ln $i $i.backup
+fi
+done

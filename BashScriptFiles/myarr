@@ -1,0 +1,16 @@
+arr=()
+typeset -i i=0
+read -p "Please Enter the Lenth of the Array: " lenth
+while true
+do
+    if [[ $i < $lenth ]]; then
+        read -p "Enter the Element: " ele 
+        arr+=($ele)
+        i=$i+1
+    else
+        break
+    fi
+done
+echo "The Array You Enterd is (${arr[@]})"
+
+

@@ -1,0 +1,10 @@
+export LC_COLLATE=C
+shopt -s extglob
+
+for i in `ls /home/nathan/`
+do
+if [ ! -x $i ]; then
+    chmod +x $i
+fi
+done
+    

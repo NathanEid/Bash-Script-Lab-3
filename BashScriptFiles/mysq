@@ -1,0 +1,8 @@
+
+read -p "Enter the Number: " num
+mysq () {
+ sq=`expr $num "*" $num`
+ echo "$num^2 = $sq"
+}
+
+mysq $num

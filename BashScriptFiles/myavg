@@ -1,0 +1,20 @@
+arr=()
+typeset -i i=0
+typeset -i sum=0
+typeset -i avg=0
+
+read -p "Please Enter How Many Numbers you want to calculate's they Averag: " lenth
+while true
+do
+    if [[ $i < $lenth ]]; then
+        read -p "Enter the Element: " ele 
+        arr+=($ele)
+        i=$i+1
+        sum=$sum+$ele
+    else
+        break
+    fi
+done
+avg=$sum/$lenth
+echo "The Average of this numbers: $avg"
+

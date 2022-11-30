@@ -1,0 +1,21 @@
+export LC_COLLATE=C
+shopt -s extglob
+
+read -p "Please Enter a String: " str
+
+case $str in
++([A-Z]) )
+    echo "Capital Leters"
+    ;;
++([a-z]) )
+    echo "Small Leters"
+    ;;
++([0-9]) )
+    echo "Numbers"
+    ;;
++([a-zA-Z0-9]) )
+    echo "Mixed"
+    ;;
+*)
+echo "Nothing"
+esac

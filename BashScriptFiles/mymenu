@@ -1,0 +1,34 @@
+export LC_COLLATE=C
+shopt -s extglob
+
+<<Comment
+select op in "Press 1 to ls" "Press 2 to ls -a" "Press 3 to exit"
+do
+    case $op in
+        "Press 1 to ls" )
+        ls
+        ;;
+        "Press 2 to ls -a" )
+        ls -a
+        ;;
+        "Press 3 to exit" )
+        break
+        ;;
+    esac
+done
+Comment
+
+read -p $'Press 1 to ls\nPress 2 to ls -a\nPress 3 to exit\n>> ' op
+while true
+do
+    if [ $op = 1 ]; then
+    ls
+    read -p ">> " op
+    elif [ $op = 2 ]; then
+    ls -a
+    read -p ">> " op
+    else
+    break
+    fi
+done
+    
